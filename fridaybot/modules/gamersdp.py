@@ -16,6 +16,7 @@ COLLECTION_STRINGZ = [
     "star-wars-iphone-6-wallpaper",
     "kylo-ren-wallpaper",
     "darth-vader-wallpaper",
+    "emma-stone-hd-wallpaper",
 ]
 
 
