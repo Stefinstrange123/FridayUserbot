@@ -11,12 +11,8 @@ from fridaybot import CMD_HELP
 from fridaybot.utils import friday_on_cmd
 
 COLLECTION_STRINGZ = [
-    "star-wars-wallpaper-1080p",
-    "4k-sci-fi-wallpaper",
-    "star-wars-iphone-6-wallpaper",
-    "kylo-ren-wallpaper",
-    "darth-vader-wallpaper",
-    "emma-stone-hd-wallpaper",
+    "https://danbooru.donmai.us/posts?tags=kurokan_%28kokkyou_oudan%29",
+   
 ]
 
 
@@ -26,15 +22,15 @@ async def animepp():
 
     rnd = random.randint(0, len(COLLECTION_STRINGZ) - 1)
 
-    pack = COLLECTION_STRINGZ[rnd]
+    pack = COLLECTION_STRINGZ[rnd],
 
-    pc = requests.get("http://getwallpapers.com/collection/" + pack).text
+    pc = requests.get("https://danbooru.donmai.us/" + pack).text
 
     f = re.compile("/\w+/full.+.jpg")
 
     f = f.findall(pc)
 
-    fy = "http://getwallpapers.com" + random.choice(f)
+    fy = "http://https://danbooru.donmai.us" + random.choice(f)
 
     print(fy)
 
